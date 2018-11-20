@@ -14,3 +14,45 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+
+$(document).ready(function() {
+
+// show the 1 tab
+    $(".tab").eq(0).show();
+    $(".tab").eq(1).hide();
+    $(".tab").eq(2).hide();
+
+// show when click 1 tab
+	$(".cat-title button").eq(0).click(function() {
+		$(".tab").eq(0).show();
+		$(".tab").eq(1).hide();
+		$(".tab").eq(2).hide();
+	});
+
+// show when click 2 tab
+	$(".cat-title button").eq(1).click(function() {
+		$(".tab").eq(0).hide();
+		$(".tab").eq(1).show();
+		$(".tab").eq(2).hide();
+	});
+
+// show when click 3 tab
+	$(".cat-title button").eq(2).click(function() {
+		$(".tab").eq(0).hide();
+		$(".tab").eq(1).hide();
+		$(".tab").eq(2).show();
+
+	});
+
+// hide by default the drop-down menu of the avatar
+	$(".show_avatar").hide();
+
+// montrer menu déroulant quand click on the avatar
+	$(".rounded-circle").on("click", function(){
+		$(".show_avatar").show();
+	});
+
+});
