@@ -1,24 +1,15 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Here is le lien de notre belle app Heroku: https://to-do-bodoo.herokuapp.com/
 
-Things you may want to cover:
+## :family: Voici notre super équipe :family: :
 
-* Ruby version
+Noms | Pseudo Slack
+------------ | -------------
+Pauline Labaisse | @Pauline Labaisse :baby_chick:
+Margaux Cortier | @Margaux Crt :penguin:
+Irina Penkovskaia | @Ira P. :octocat:
+Max de Ponfilly | @Max :tiger:
+Hélène Martin | @Helene Cbm :panda_face:
+Victor Gabella | @Chartie :bear:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*Enjoy*
