@@ -61,7 +61,15 @@ $(document).ready(function() {
 
 });
 
-	
+// hide by default the drop-down menu of the avatar
+	$(".show_avatar").hide();
+
+// montrer menu déroulant quand click on the avatar
+	$(".rounded-circle").on("click", function(){
+		$(".show_avatar").show();
+	});
+
+});
 
 
 
