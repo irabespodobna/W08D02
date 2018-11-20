@@ -47,15 +47,21 @@ $(document).ready(function() {
 
 	});
 
-// hide by default the drop-down menu of the avatar
-	$(".show_avatar").hide();
+	$(document).ready(function(){
+  
+  $('ul.tabs li').click(function(){
+    var tab_id = $(this).attr('data-tab');
 
-// montrer menu déroulant quand click on the avatar
-	$(".rounded-circle").on("click", function(){
-		$(".show_avatar").show();
-	});
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+  })
 
 });
+
+	
 
 
 

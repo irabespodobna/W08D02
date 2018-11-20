@@ -1,17 +1,18 @@
 <h1 class="text-center mb-4">Welcome to my todolist app</h1>
 <%= render 'layouts/task_form'  %>
 
-<div class="tab-container">
-  <div class="cat-title">
-      <% @categories.each do |category|%>
-          <button><%= category.title  %></button>
-      <% end%>
-  </div>
 
-  <div class="cat-content">
-      <% @categories.each do |category|%>
-          <div class="tab">
-          <% category.tasks.each do |task|  %>
+<div class="container">
+  <ul class="tabs">
+    <li class="tab-link current" data-tab="tab-1"><%=@categories[0].title %></li>
+    <li class="tab-link" data-tab="tab-2"><%=@categories[1].title%></li>
+    <li class="tab-link" data-tab="tab-3"><%=@categories[2].title%></li>
+
+  </ul>
+
+  
+  <div id="tab-1" class="tab-content current">
+    <% @categories[0].tasks.each do |task|  %>
               <li>
                 <%= task.title  %>
                 <% unless task.deadline.nil? %>
@@ -20,9 +21,30 @@
               </li>
           <% end %>
           </div>
-      <% end %>
-  </div>
-</div>
+
+  
+<div id="tab-2" class="tab-content">
+  <% @categories[1].tasks.each do |task|  %>
+              <li>
+                <%= task.title  %>
+                <% unless task.deadline.nil? %>
+                  , to read: <%= task.deadline.strftime('%D')  %>
+                <% end %>
+              </li>
+          <% end %>
+          </div>
+
+  <div id="tab-3" class="tab-content">
+  <% @categories[2].tasks.each do |task|  %>
+              <li>
+                <%= task.title  %>
+                <% unless task.deadline.nil? %>
+                  , to read: <%= task.deadline.strftime('%D')  %>
+                <% end %>
+              </li>
+          <% end %>
+          </div>
+
 
 
 <div class="container">
@@ -36,3 +58,5 @@
     <% end %>
   </div>
 </div>
+
+<div class="container">
