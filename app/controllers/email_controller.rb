@@ -1,5 +1,7 @@
-class UtilisateurController < ApplicationController
+class EmailController < ApplicationController
   def index
+
+
   	loulou = Utilisateur.all 
   	@mails = []
   	loulou.each do |mail|
@@ -11,7 +13,7 @@ class UtilisateurController < ApplicationController
   		@objects << mail.object
   		end  
 
-
-  
   end
 end
+
+
